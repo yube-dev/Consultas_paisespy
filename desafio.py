@@ -1,6 +1,7 @@
 import requests
-
-
+import os
+import json
+lista_paises = []
 def comprobar_nombre(nombre_pais):
     while nombre_pais == "":
         nombre_pais = (
@@ -23,7 +24,7 @@ def consultar_pais(nombre_pais):
             "poblacion": datos[0]["population"],
             "idiomas": list(datos[0]["languages"].values()),
         }
-        print(info_pais)
+        print(json.dumps(info_pais, indent=4, ensure_ascii=False))
         return info_pais
 
     elif respuesta.status_code == 404:
@@ -31,14 +32,29 @@ def consultar_pais(nombre_pais):
     return None
 
 
+def guardar_info(informacion):
+    ruta = "paises.json"
+    datos_existentes = []
+    if os.path.exists(ruta):
+        with open(ruta, "r", encoding="utf-8") as archivo:
+            datos_existentes = json.load(archivo)
+    datos_existentes.append(informacion)
+
+    with open(ruta, "w", encoding="utf-8") as archivo:
+            json.dump(datos_existentes, archivo, indent=4, ensure_ascii=False)
+
+
 while True:
     pais = input("Ingrese el nombre de un pais: ").lower().strip()
     pais = comprobar_nombre(pais)
 
     informacion = consultar_pais(pais)
+    lista_paises.append(informacion["nombre_oficial"])
+    guardar_info(informacion)
+
 
     respuesta = input("Quieres consultar otro pais? (s/n): ").lower()
 
     if respuesta == "n":
         break
-# video 1:09:33 , explicacion de la estructura de datos
+# video 1:38:00, ciclos

@@ -1,0 +1,49 @@
+[
+    {
+        "nombre": "Republic of Peru",
+        "capital": [
+            "Lima"
+        ],
+        "region": "Americas",
+        "poblacion": 32971846,
+        "idiomas": [
+            "Aymara",
+            "Quechua",
+            "Spanish"
+        ]
+    },
+    {
+        "nombre": "Republic of China (Taiwan)",
+        "capital": [
+            "Taipei"
+        ],
+        "region": "Asia",
+        "poblacion": 23503349,
+        "idiomas": [
+            "Chinese"
+        ]
+    },
+    {
+        "nombre": "Republic of China (Taiwan)",
+        "capital": [
+            "Taipei"
+        ],
+        "region": "Asia",
+        "poblacion": 23503349,
+        "idiomas": [
+            "Chinese"
+        ]
+    },
+    {
+        "nombre": "Republic of Paraguay",
+        "capital": [
+            "Asunción"
+        ],
+        "region": "Americas",
+        "poblacion": 7132530,
+        "idiomas": [
+            "Guaraní",
+            "Spanish"
+        ]
+    }
+]
