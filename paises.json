@@ -13,37 +13,14 @@
         ]
     },
     {
-        "nombre": "Republic of China (Taiwan)",
+        "nombre": "Romania",
         "capital": [
-            "Taipei"
+            "Bucharest"
         ],
-        "region": "Asia",
-        "poblacion": 23503349,
+        "region": "Europe",
+        "poblacion": 19286123,
         "idiomas": [
-            "Chinese"
-        ]
-    },
-    {
-        "nombre": "Republic of China (Taiwan)",
-        "capital": [
-            "Taipei"
-        ],
-        "region": "Asia",
-        "poblacion": 23503349,
-        "idiomas": [
-            "Chinese"
-        ]
-    },
-    {
-        "nombre": "Republic of Paraguay",
-        "capital": [
-            "Asunción"
-        ],
-        "region": "Americas",
-        "poblacion": 7132530,
-        "idiomas": [
-            "Guaraní",
-            "Spanish"
+            "Romanian"
         ]
     }
 ]

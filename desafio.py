@@ -49,7 +49,7 @@ while True:
     pais = comprobar_nombre(pais)
 
     informacion = consultar_pais(pais)
-    lista_paises.append(informacion["nombre_oficial"])
+    lista_paises.append(informacion.get("nombre_oficial"))
     guardar_info(informacion)
 
 
@@ -57,4 +57,13 @@ while True:
 
     if respuesta == "n":
         break
-# video 1:38:00, ciclos
+
+for pais in lista_paises:
+    print(pais)
+    with open('paises.json', 'r', encoding='utf-8') as archivo:
+        todos_los_paises = json.load(archivo)
+        for elem in todos_los_paises:
+            if elem['nombre_oficial'] == pais:
+                print(json.dumps(elem, indent=4, ensure_ascii=False))
+                
+        print("--------------------------------------------------")
